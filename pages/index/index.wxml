@@ -1,0 +1,28 @@
+<!--摊位信息-->
+<view class="table">
+ <view class="tr bg-w">
+ <view class="th">名字</view>
+ <view class="th">申请状态</view>
+ <view class="th ">操作</view>
+ </view>
+      <block  wx:for="{{list}}" wx:for-item="item" wx:key="index">
+      <view class="tr bg-g" wx:if="{{index % 2 == 0}}">
+      <view class="td">{{item.content}}</view>
+      <view class="td">{{item.status == 0? '未申请':'已申请'}}</view>
+      <view class="td">
+        <a data-id="{{item.id}}" wx:if="{{authority == 2}}"  bindtap="bindViewTap">修改</a>
+        <a data-id="{{item.id}}" wx:if="{{authority == 2}}" bindtap="deleteStreet">删除</a>
+        <a data-id="{{item.id}}" wx:if="{{item.status == 0&&authority == 0}}"  bindtap="applicationPoint">申请</a>
+      </view>
+      </view>
+      <view class="tr" wx:else>
+      <view class="td">{{item.content}}</view>
+      <view class="td">{{item.status == 0? '未申请':'已申请'}}</view>
+      <view class="td">
+        <a data-id="{{item.id}}" wx:if="{{authority == 2}}"   bindtap="bindViewTap">修改</a>
+        <a data-id="{{item.id}}" wx:if="{{authority == 2}}" bindtap="deleteStreet">删除</a>
+        <a data-id="{{item.id}}" wx:if="{{item.status == 0 && authority == 0}}"  bindtap="applicationPoint">申请</a>
+      </view>
+ </view>
+ </block>
+</view>

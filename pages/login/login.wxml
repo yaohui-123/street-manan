@@ -1,0 +1,42 @@
+<!--index.wxml-->
+<view class="background">
+    <form catchsubmit="formSubmit">
+<view style="border-radius: 20rpx;font-family: 宋体;" class="weui-cells weui-cells_after-title">
+            <view class="weui-cell weui-cell_active">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">用户名：</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <input class="weui-input" value="{{formValue.username}}" name="username" placeholder-class="weui-input__placeholder"  placeholder="请输入用户名"/>
+                </view>
+            </view>
+            <view class="weui-cell weui-cell_active">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">密码：</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <input class="weui-input" password='true' value="{{formValue.password}}" name="password" placeholder-class="weui-input__placeholder"  placeholder="请输入密码"/>
+                </view>
+            </view>
+            <view class="weui-cell weui-cell_active weui-cell_select weui-cell_select-after">
+              <view class="weui-cell__hd">
+                    <view class="weui-label">身份</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <picker bindchange="bindCountryChange" value="{{countryIndex}}" range="{{countries}}">
+                        <view class="weui-select weui-select_in-select-after">{{countries[countryIndex]}}</view>
+                    </picker>
+                </view>
+            </view>
+            <view style="margin-top:5%;">
+                <view style="font-size:14px;color:blue;float:right;margin-right:30rpx;">
+                  <rich-text bindtap="addUser">立即注册</rich-text>
+                </view>
+            </view>
+            <view style="margin-top:25%;height:20%;">
+                <button style="background-color:#ADD8E6;width:90%;" formType="submit">登陆</button>
+            </view>
+</view>
+</form>
+</view>
+

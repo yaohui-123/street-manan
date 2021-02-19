@@ -1,0 +1,9 @@
+<map class="map" 
+longitude="107.5145373895"
+latitude="26.2628227084"
+bindtap="onTapMap"
+markers="{{markers}}"
+bindmarkertap="onTapMarker"
+></map>
+
+

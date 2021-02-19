@@ -1,0 +1,27 @@
+<!--摊位信息-->
+<view class="table">
+ <view class="tr bg-w">
+ <view class="th">申请人</view>
+ <view class="th">销售物品</view>
+ <view class="th ">申请地点</view>
+ <view class="th ">操作</view>
+ </view>
+      <block  wx:for="{{list}}" wx:for-item="item" wx:key="index">
+      <view class="tr bg-g" wx:if="{{index % 2 == 0}}">
+      <view class="td">{{item.userName}}</view>
+      <view class="td">{{item.sellGoods}}</view>
+      <view class="td">{{item.streetName}}</view>
+      <view class="td">
+        <a data-id="{{item.id}}" wx:if="{{item.status == 0&&authority === 2}}"  bindtap="applicationPoint">审核</a>
+      </view>
+      </view>
+      <view class="tr" wx:else>
+        <view class="td">{{item.userName}}</view>
+      <view class="td">{{item.sellGoods}}</view>
+      <view class="td">{{item.streetName}}</view>
+      <view class="td">
+        <a data-id="{{item.id}}" wx:if="{{item.status == 0&&authority === 2}}"  bindtap="applicationPoint">审核</a>
+      </view>
+ </view>
+ </block>
+</view>

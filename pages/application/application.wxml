@@ -1,0 +1,32 @@
+<!--index.wxml-->
+<form catchsubmit="formSubmit">
+<view class="weui-cells weui-cells_after-title">
+            <view style="display:none" class="weui-cell weui-cell_active">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">用户id：</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <input class="weui-input" value="{{formValue.userId}}" name="userId" placeholder-class="weui-input__placeholder"  placeholder="请输入用户名"/>
+                </view>
+            </view>
+            <view style="display:none" class="weui-cell weui-cell_active">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">位置id：</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <input class="weui-input" value="{{formValue.streetId}}" name="streetId" placeholder-class="weui-input__placeholder"  placeholder="请输入用户名"/>
+                </view>
+            </view>
+            <view class="weui-cell weui-cell_active">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">销售产品：</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <input class="weui-input" value="{{formValue.sellGoods}}" name="sellGoods" placeholder-class="weui-input__placeholder"  placeholder="请输入销售的产品"/>
+                </view>
+            </view>
+        <view class="weui-btn-area">
+            <button class="weui-btn" type="primary" size="mini" formType="submit">确定</button>
+        </view>
+</view>
+</form>
